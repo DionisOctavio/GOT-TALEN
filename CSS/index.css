@@ -1,20 +1,57 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: rgb(239, 239, 239);
+    background-color: #f7f7f2;
+    margin: 0;
 }
 
 header {
-    background-color: black;
+    background-color: rgb(255, 255, 255);
     color: white;
     padding: 10px;
     font-size: 10px;
+    border-bottom: 1px solid rgba(182, 182, 182, 0.212);
+    margin: 0;
+}
+
+header .encabezado {
+    display: flex;
+    justify-content: space-between; /* Separa los elementos a los extremos */
+    align-items: center; /* Alinea verticalmente al centro */
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+}
+
+header .izquierda {
+    display: flex;
+}
+
+header .derecha {
+    display: flex;
+}
+
+header .menu img {
+    margin-top: 2px;
+    width: 32px;
+    height: 32px;
+}
+
+header .logo img {
+    width: 210px;
+    height: 36px;
+}
+
+header .carrito img {
+    width: 32px;
+    height: 32px;
+}
+
+header .perfil img {
+    width: 32px;
+    height: 32px;
+    margin-left: 20px;
 }
 
 
-.cuerpo {
 
-}
-   
 .carrusel {
     display: flex;
     align-items: center;
@@ -46,12 +83,12 @@ header {
 .carrusel .recuadro-negro p {
     display: flex;
     color: white;
-    padding: 1%;
-    font-size: 16px;
+    margin-bottom: 3%;
+    font-size: 24px;
 }
 
 .div2 {
-    justify-content: space-around;
+
 }
 
 .div3 {
