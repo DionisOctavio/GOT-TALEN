@@ -15,9 +15,9 @@ header {
 
 header .encabezado {
     display: flex;
-    justify-content: space-between; /* Separa los elementos a los extremos */
-    align-items: center; /* Alinea verticalmente al centro */
-    width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%; 
 }
 
 header .izquierda {
@@ -87,31 +87,51 @@ header .perfil img {
     font-size: 24px;
 }
 
-.div2 {
-
+.opciones {
+    display: flex;
+    justify-content: center;
+    margin-top: 18%;
+    margin-bottom: 3%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
-.div3 {
-    grid-row-start: 2;
+.ropa {
+    border: #222 1px solid;
 }
 
-.div4 {
-    grid-row-start: 2;
+.ropa img{
+    width: 100%;
+    height: auto;
 }
 
-.div5 {
-    grid-row-start: 2;
+.mercha {
+    border: #222 1px solid;
 }
 
-.div6 {
-    grid-column: span 4 / span 4;
-    grid-row-start: 3;
+.mercha img {
+    width: 100%;
+    height: auto;
 }
 
-.div7 {
-    grid-column: span 4 / span 4;
-    grid-row-start: 4;
+.comida {
+    border: #222 1px solid;
 }
+
+.comida img {
+    width: 100%;
+    height: auto;
+}
+
+.electronica {
+    border: #222 1px solid;
+}
+
+.electronica img {
+    width: 100%;
+    height: auto;
+}
+
 
 footer {
     background-color: #222;
