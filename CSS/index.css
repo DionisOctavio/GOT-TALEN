@@ -1,9 +1,10 @@
+/*======== Body estilos de todo el cuerpo ========*/
 body {
     font-family: Arial, sans-serif;
     background-color: #f7f7f2;
     margin: 0;
 }
-
+/*======== Estilos del encaezado ========*/
 header {
     background-color: rgb(255, 255, 255);
     color: white;
@@ -20,10 +21,7 @@ header .encabezado {
     width: 100%; 
 }
 
-header .izquierda {
-    display: flex;
-}
-
+header .izquierda,
 header .derecha {
     display: flex;
 }
@@ -50,42 +48,54 @@ header .perfil img {
     margin-left: 20px;
 }
 
-
+/*======== Cuerpo de la web apartado del Carruesel del inicio ========*/
 
 .carrusel {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: 4%;
     position: relative;
-    margin-bottom: 7%;
+    width: 70%; 
+    margin: 4% auto 7%; 
 }
 
-.carrusel img {
-    width: 70%;
+.slider {
+    
+
+}
+
+.slider ul {
+    
+}
+
+.slider li {
+    
+}
+
+.slide img {
+    width: 80%; 
     height: auto;
-    z-index: 2;
 }
-
 .carrusel .recuadro-negro {
-    width: 80%;
-    height: 70%;
+    width: 100%;
+    height: 7vw; 
     background-color: black;
-    position: absolute;
+    bottom: 0;
+    display: flex; 
+    align-items: flex-end; 
+    justify-content: center; 
+    color: white;
+    padding: 10px;
+    margin-top: -40px;
     z-index: 1;
-    bottom: -30%;
-    display: flex;
-    align-items: end;
-    justify-content: center;
 }
 
 .carrusel .recuadro-negro p {
     display: flex;
+    justify-content: center;
     color: white;
     margin-bottom: 3%;
     font-size: 24px;
 }
+
+/*======== Apartado de las opciones del usuario ========*/
 
 .opciones {
     display: flex;
@@ -132,6 +142,7 @@ header .perfil img {
     height: auto;
 }
 
+/*======== Pie de pagina de la web ========*/
 
 footer {
     background-color: #222;
