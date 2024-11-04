@@ -3,6 +3,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f7f7f2;
     margin: 0;
+    font-family: "Roboto Mono", monospace;
 }
 /*======== Estilos del encaezado ========*/
 header {
@@ -50,49 +51,69 @@ header .perfil img {
 
 /*======== Cuerpo de la web apartado del Carruesel del inicio ========*/
 
+
 .carrusel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
     position: relative;
-    width: 70%; 
-    margin: 4% auto 7%; 
+    height: 400px; /* Ajusta la altura del carrusel según sea necesario */
+    width: 80%; /* Ajusta el ancho del carrusel según sea necesario */
+    margin: auto; /* Centra el carrusel horizontalmente */
+    margin-top: 3%;
 }
 
 .slider {
-    
-
+    display: flex;
+    width: 400%; /* 4 imágenes = 400% */
+    animation: slide 30s infinite;
 }
 
 .slider ul {
-    
+    display: flex;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    list-style: none;
 }
 
 .slider li {
-    
-}
-
-.slide img {
-    width: 80%; 
-    height: auto;
-}
-.carrusel .recuadro-negro {
-    width: 100%;
-    height: 7vw; 
-    background-color: black;
-    bottom: 0;
-    display: flex; 
-    align-items: flex-end; 
-    justify-content: center; 
-    color: white;
-    padding: 10px;
-    margin-top: -40px;
-    z-index: 1;
-}
-
-.carrusel .recuadro-negro p {
+    flex: 0 0 100%; /* Cada imagen ocupa el 100% del ancho del carrusel */
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Centra las imágenes verticalmente */
+    align-items: center; /* Centra las imágenes verticalmente */
+}
+
+.slider img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(0); }
+    25% { transform: translateX(-100%); }
+    45% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    70% { transform: translateX(-200%); }
+    75% { transform: translateX(-300%); }
+    95% { transform: translateX(-300%); }
+    100% { transform: translateX(0); } /* Retorno inmediato al principio */
+}
+
+.cuerpo h1 {
     color: white;
-    margin-bottom: 3%;
-    font-size: 24px;
+    background-color: #2970DB;
+    text-align: center;
+    font-size: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 80%;
+    margin: auto;
+    margin-top: 2%;
+    border: #2970DB 1px solid;
 }
 
 /*======== Apartado de las opciones del usuario ========*/
@@ -100,23 +121,50 @@ header .perfil img {
 .opciones {
     display: flex;
     justify-content: center;
-    margin-top: 18%;
+    margin-top: 10%;
     margin-bottom: 3%;
     margin-left: 10%;
     margin-right: 10%;
 }
 
 .ropa {
-    border: #222 1px solid;
+    margin-right: 1%;
+    background-color: white;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s;
 }
+
+.ropa:hover {
+    background-color: #2970DB;
+}
+
 
 .ropa img{
     width: 100%;
     height: auto;
 }
 
+.ropa p {
+    text-align: center;
+    font-size: 18px;
+    color: #2970DB;
+    transition: background-color 0.3s;
+}
+
+.ropa:hover p {
+    color: white;
+}
+
 .mercha {
-    border: #222 1px solid;
+    background-color: white;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+    margin-right: 1%;
+    margin-left: 1%;
+    transition: background-color 0.3s;
+}
+
+.mercha:hover {
+    background-color: #2970DB;
 }
 
 .mercha img {
@@ -124,8 +172,27 @@ header .perfil img {
     height: auto;
 }
 
+.mercha p {
+    text-align: center;
+    font-size: 18px;
+    color: #2970DB;
+    transition: background-color 0.3s;
+}
+
+.mercha:hover p {
+    color: white;
+}
+
 .comida {
-    border: #222 1px solid;
+    background-color: white;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+    margin-right: 1%;
+    margin-left: 1%;
+    transition: background-color 0.3s;
+}
+
+.comida:hover {
+    background-color: #2970DB;
 }
 
 .comida img {
@@ -133,13 +200,42 @@ header .perfil img {
     height: auto;
 }
 
+.comida p {
+    text-align: center;
+    font-size: 18px;
+    color: #2970DB;
+    transition: background-color 0.3s;
+}
+
+.comida:hover p {
+    color: white;
+}
+
 .electronica {
-    border: #222 1px solid;
+    background-color: white;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+    margin-left: 1%;
+    transition: background-color 0.3s;
+}
+
+.electronica:hover {
+    background-color: #2970DB;
 }
 
 .electronica img {
     width: 100%;
     height: auto;
+}
+
+.electronica p {
+    text-align: center;
+    font-size: 18px;
+    color: #2970DB;
+    transition: background-color 0.3s;
+}
+
+.electronica:hover p {
+    color: white;
 }
 
 /*======== Pie de pagina de la web ========*/
