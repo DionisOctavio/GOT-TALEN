@@ -11,7 +11,6 @@ header {
     color: white;
     padding: 10px;
     font-size: 10px;
-    border-bottom: 1px solid rgba(182, 182, 182, 0.212);
     margin: 0;
 }
 
@@ -27,15 +26,30 @@ header .derecha {
     display: flex;
 }
 
-header .menu img {
-    margin-top: 2px;
-    width: 32px;
-    height: 32px;
+header .logo img {
+    margin-left: 20px;
+    width: auto;
+    height: 50px;
 }
 
-header .logo img {
-    width: 210px;
-    height: 36px;
+header .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .menu menu a{
+    text-decoration: none;
+    color: black;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+header .menu menu a:hover {
+    color: #2970DB;
 }
 
 header .carrito img {
@@ -44,10 +58,11 @@ header .carrito img {
 }
 
 header .perfil img {
-    width: 32px;
+    width: px;
     height: 32px;
     margin-left: 20px;
 }
+
 
 /*======== Cuerpo de la web apartado del Carruesel del inicio ========*/
 
@@ -58,10 +73,9 @@ header .perfil img {
     align-items: center;
     overflow: hidden;
     position: relative;
-    height: 400px; /* Ajusta la altura del carrusel según sea necesario */
-    width: 80%; /* Ajusta el ancho del carrusel según sea necesario */
+    height: auto; /* Ajusta la altura del carrusel según sea necesario */
+    width: 100%; /* Ajusta el ancho del carrusel según sea necesario */
     margin: auto; /* Centra el carrusel horizontalmente */
-    margin-top: 3%;
 }
 
 .slider {
