@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "japanese";
+    src: url("/letras/Japanese 3017.ttf");
+}
+
 /*======== Body estilos de todo el cuerpo ========*/
 body {
     font-family: Arial, sans-serif;
@@ -9,63 +14,146 @@ body {
 header {
     background-color: rgb(255, 255, 255);
     color: white;
-    padding: 10px;
     font-size: 10px;
-    margin: 0;
 }
 
 header .encabezado {
     display: flex;
     justify-content: space-between; 
     align-items: center; 
-    width: 100%; 
+    width: 100%;
+
 }
 
 header .izquierda,
 header .derecha {
     display: flex;
+    margin: 0;
+}
+
+header .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 header .logo img {
     margin-left: 20px;
     width: auto;
     height: 50px;
+    margin-bottom: 6%;
 }
 
 header .menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-header .menu menu a{
-    text-decoration: none;
-    color: black;
-    margin-left: 20px;
-    margin-right: 20px;
-    font-size: 16px;
-    font-weight: bold;
+    background-color: rgb(255, 255, 255);
+    color: #222;
+    margin-left: 5%;
     transition: background-color 0.3s;
 }
 
-header .menu menu a:hover {
+header .menu button {
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    font-family: 'japanese', sans-serif;
+    color: #222;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+header .menu button:hover {
     color: #2970DB;
+    border-bottom: #2970DB solid 4px;
+    font-size: 18px;
+}
+
+/*======== Derecha ========*/
+
+header .carrito {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-right: 10%;
+}
+
+header .carrito button {
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    font-family: 'japanese', sans-serif;
+    color: #222;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+header .carrito button:hover {
+    color: #2970DB;
+    border-bottom: #2970DB solid 4px;
 }
 
 header .carrito img {
-    width: 32px;
-    height: 32px;
+    width: 100%;
+    height: 100%;
+}
+
+header .perfil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-right: 10%;
+}
+
+header .perfil button {
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    font-family: 'japanese', sans-serif;
+    color: #222;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+header .perfil button:hover {
+    color: #2970DB;
+    border-bottom: #2970DB solid 4px;
 }
 
 header .perfil img {
-    width: px;
-    height: 32px;
-    margin-left: 20px;
+    width: 100%;
+    height: 100%;
 }
 
 
+header .carrito img#cesta2,
+header .perfil img#perfil2 {
+    display: none; /* Oculta las imágenes cesta2 y perfil2 por defecto */
+}
+
+header .carrito button:hover img#cesta1,
+header .perfil button:hover img#perfil1 {
+    display: none; /* Oculta la imagen original en hover */
+}
+
+header .carrito button:hover img#cesta2,
+header .perfil button:hover img#perfil2 {
+    display: block; /* Muestra la imagen alterna en hover */
+}
+
 /*======== Cuerpo de la web apartado del Carruesel del inicio ========*/
 
+.cuerpo {
+    margin: 0; 
+}
 
 .carrusel {
     display: flex;
@@ -73,16 +161,17 @@ header .perfil img {
     align-items: center;
     overflow: hidden;
     position: relative;
-    height: auto; /* Ajusta la altura del carrusel según sea necesario */
-    width: 100%; /* Ajusta el ancho del carrusel según sea necesario */
-    margin: auto; /* Centra el carrusel horizontalmente */
+    height: auto; 
+    width: 100%; 
+    margin: 0;
 }
 
 .slider {
     display: flex;
-    width: 400%; /* 4 imágenes = 400% */
+    width: 400%; 
     animation: slide 30s infinite;
-}
+    margin: -2px;
+ }
 
 .slider ul {
     display: flex;
@@ -93,10 +182,10 @@ header .perfil img {
 }
 
 .slider li {
-    flex: 0 0 100%; /* Cada imagen ocupa el 100% del ancho del carrusel */
+    flex: 0 0 100%; 
     display: flex;
-    justify-content: center; /* Centra las imágenes verticalmente */
-    align-items: center; /* Centra las imágenes verticalmente */
+    justify-content: center; 
+    align-items: center;
 }
 
 .slider img {
