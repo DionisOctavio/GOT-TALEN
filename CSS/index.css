@@ -151,10 +151,54 @@ header .perfil button:hover img#perfil2 {
 
 /*======== Cuerpo de la web apartado del Carruesel del inicio ========*/
 
-.cuerpo {
-    margin: 0; 
+
+
+.img-inicio {
+    position: relative;
+    display: flex;
 }
 
+.img-inicio img{
+    width: 100%;
+    height: auto;
+}
+
+.img-inicio .img-texto {
+    position: absolute;
+    z-index: 2;
+    margin-left: 24px;
+}
+
+.img-inicio h2{
+    font-family: 'japanese', sans-serif;
+    font-weight: normal;
+    margin-bottom: -10px;
+    font-size: 48px;
+    color: #ffffff;
+}
+
+.img-inicio p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.img-texto botton {
+    font-family: japanese, sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 7px 40px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.img-texto botton:hover {
+    background-color: #2970DB;
+}
+/*
 .carrusel {
     display: flex;
     justify-content: center;
@@ -203,143 +247,127 @@ header .perfil button:hover img#perfil2 {
     70% { transform: translateX(-200%); }
     75% { transform: translateX(-300%); }
     95% { transform: translateX(-300%); }
-    100% { transform: translateX(0); } /* Retorno inmediato al principio */
+    100% { transform: translateX(0); } 
 }
-
-.cuerpo h1 {
-    color: white;
-    background-color: #2970DB;
-    text-align: center;
-    font-size: 25px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    width: 80%;
-    margin: auto;
-    margin-top: 2%;
-    border: #2970DB 1px solid;
-}
-
+*/
 /*======== Apartado de las opciones del usuario ========*/
+.cuerpo {
+    margin-left: 10px;
+    margin-right: 10px;
+}
 
-.opciones {
+/*======== Apartado de las barras ========*/
+
+.barra {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.barra .bar-text-1 h3 {
+    font-family: japanese, sans-serif;
+    font-weight: normal;
+    margin-left: 10px;
+    font-size: 24px;
+    color: #222;
+    margin: 0;
+}
+
+.barra .bar-text-2 h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    margin-right: 10px;
+    font-size: 16px;
+    color: #585858;
+    margin: 0;
+}
+
+/*======== Apartado de los productos ========*/
+
+.cuerpo hr {
+    border: none;
+    border-top: 1px solid #a1a1a1;
+    margin: 0;
+}
+
+.novedades-productos {
     display: flex;
     justify-content: center;
-    margin-top: 10%;
-    margin-bottom: 3%;
-    margin-left: 10%;
-    margin-right: 10%;
+    align-items: center;
+    padding: 20px;
 }
 
-.ropa {
-    margin-right: 1%;
-    background-color: white;
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
-    transition: background-color 0.3s;
+.producto-tarjeta {
+    width: 200px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding: 15px;
+    position: relative;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
-.ropa:hover {
-    background-color: #2970DB;
-}
-
-
-.ropa img{
+.producto-tarjeta img {
     width: 100%;
     height: auto;
+    border-radius: 10px;
 }
 
-.ropa p {
-    text-align: center;
-    font-size: 18px;
-    color: #2970DB;
-    transition: background-color 0.3s;
+.producto-tarjeta h3 {
+    font-size: 14px;
+    color: #333;
+    margin: 10px 0;
+    font-weight: normal;
 }
 
-.ropa:hover p {
-    color: white;
+.precio {
+    font-size: 20px;
+    color: #2a74ff;
+    margin: 10px 0;
+    font-weight: bold;
 }
 
-.mercha {
-    background-color: white;
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
-    margin-right: 1%;
-    margin-left: 1%;
-    transition: background-color 0.3s;
-}
-
-.mercha:hover {
-    background-color: #2970DB;
-}
-
-.mercha img {
+.btn-agregar {
+    background-color: #2a74ff;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
     width: 100%;
-    height: auto;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.mercha p {
-    text-align: center;
-    font-size: 18px;
-    color: #2970DB;
-    transition: background-color 0.3s;
+.btn-agregar:hover {
+    background-color: #1a5ac6;
 }
 
-.mercha:hover p {
-    color: white;
+.favorito {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    font-size: 20px;
+    color: #2a74ff;
+    cursor: pointer;
 }
 
-.comida {
-    background-color: white;
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
-    margin-right: 1%;
-    margin-left: 1%;
-    transition: background-color 0.3s;
+.favorito:hover {
+    color: #ff4b4b;
 }
 
-.comida:hover {
-    background-color: #2970DB;
-}
+/*======== Apartado Ultimas Figuras ========*/
 
-.comida img {
-    width: 100%;
-    height: auto;
-}
 
-.comida p {
-    text-align: center;
-    font-size: 18px;
-    color: #2970DB;
-    transition: background-color 0.3s;
-}
+/*======== Apartado de Aperitivos mas vendidos ========*/
 
-.comida:hover p {
-    color: white;
-}
-
-.electronica {
-    background-color: white;
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
-    margin-left: 1%;
-    transition: background-color 0.3s;
-}
-
-.electronica:hover {
-    background-color: #2970DB;
-}
-
-.electronica img {
-    width: 100%;
-    height: auto;
-}
-
-.electronica p {
-    text-align: center;
-    font-size: 18px;
-    color: #2970DB;
-    transition: background-color 0.3s;
-}
-
-.electronica:hover p {
-    color: white;
-}
 
 /*======== Pie de pagina de la web ========*/
 
