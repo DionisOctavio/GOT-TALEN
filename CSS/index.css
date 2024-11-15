@@ -300,12 +300,7 @@ header .perfil button:hover img#perfil2 {
 
 
 
-.aperitimos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
+
 
 .producto-tarjeta {
     width: 300px;
@@ -341,7 +336,14 @@ header .perfil button:hover img#perfil2 {
     font-weight: bold;
 }
 
-.btn-agregar {
+.contenedor-botones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .btn-agregar {
     background-color: #2a74ff;
     color: #fff;
     border: none;
@@ -349,28 +351,30 @@ header .perfil button:hover img#perfil2 {
     padding: 10px;
     font-size: 14px;
     cursor: pointer;
-    width: 100%;
-    margin-top: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    width: 90%; /* ajusta el ancho según sea necesario */
+  }
 
 .btn-agregar:hover {
     background-color: #1a5ac6;
 }
 
 .favorito {
-    position: absolute;
-    bottom: 15px;
-    right: 15px;
+    background-color: #2a74ff;
+    padding: 7px;
+    border-radius: 10px;
     font-size: 20px;
-    color: #2a74ff;
+    color: #ffffff;
     cursor: pointer;
-}
+    margin-left: 10px; /* ajusta el margen según sea necesario */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%; /* ajusta el ancho según sea necesario */
+  }
 
 .favorito:hover {
-    color: #ff4b4b;
+    background-color: #ff4b4b;
+    color: #ffffff;
 }
 
 
@@ -378,26 +382,192 @@ header .perfil button:hover img#perfil2 {
 /*======== Apartado Ultimas Figuras ========*/
 .ultimas-figuras {
     display: flex;
-    padding: 20px;align-items: center;
-    justify-items: center;
-}
-
-.img-figura {
-    display: flex;
-}
-
-.img-figura img {
-    width: 70%;
-    height: auto;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+  }
+  
+  .carrusel {
+    width: 50%;
+    max-width: 1200px;
     padding: 20px;
-    border-radius: 30px;
-    
-}
-
-
+    overflow: hidden;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  }
+  
+  .carrusel-contenedor {
+    display: flex;
+    width: calc(300px * 10); /* 5 tarjetas */
+    animation: carruselAnim 25s infinite linear;
+  }
+  
+  .producto-tarjeta {
+    width: 300px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding: 15px;
+    margin: 0 10px;
+  }
+  
+  .img-figura {
+    display: flex;
+    justify-content: center;
+  }
+  
+/* Estilo inicial de la imagen */
+.img-figura img {
+    border-radius: 30px; /* Mantiene bordes redondeados */
+    width: 100%;
+    padding: 10px;
+    height: auto;
+    padding: 0; /* Elimina cualquier espacio interno */
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer; /* Cambia el cursor a un puntero */
+  }
+  
+  .img-figura img:hover {
+    transform: scale(1.1); /* Efecto de zoom (10% más grande) */
+  }
+  
+  
+  /* Estilo del modal */
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+  }
+  
+  .modal-content {
+    position: relative;
+  }
+  
+  .modal-content img {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 15px;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Mostrar el modal con :target */
+  .modal:target {
+    display: flex;
+  }
+  
+  /* Botón de cerrar */
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .close:hover {
+    color: red;
+  }
+  
+  
+  .producto-tarjeta h3 {
+    font-size: 14px;
+    color: #333;
+    margin: 10px 0;
+  }
+  
+  .precio {
+    font-size: 20px;
+    color: #2a74ff;
+    margin: 10px 0;
+    font-weight: bold;
+  }
+  
+  .contenedor-botones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .btn-agregar {
+    background-color: #2a74ff;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    width: 90%;
+  }
+  
+  .btn-agregar:hover {
+    background-color: #1a5ac6;
+  }
+  
+  .favorito {
+    background-color: #2a74ff;
+    padding: 7px;
+    border-radius: 10px;
+    font-size: 20px;
+    color: #ffffff;
+    cursor: pointer;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+  }
+  
+  .favorito:hover {
+    background-color: #ff4b4b;
+    color: #ffffff;
+  }
+  
+  @keyframes carruselAnim {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-1200px); /* Se mueve hacia atrás y adelante */
+    }
+  }
 
 /*======== Apartado de Aperitivos mas vendidos ========*/
 
+.aperitimos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
 
 /*======== Pie de pagina de la web ========*/
 
