@@ -380,6 +380,13 @@ header .perfil button:hover img#perfil2 {
 
 
 /*======== Apartado Ultimas Figuras ========*/
+.figuras {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
 .ultimas-figuras {
     display: flex;
     justify-content: center;
@@ -390,7 +397,7 @@ header .perfil button:hover img#perfil2 {
   }
   
   .carrusel {
-    width: 50%;
+    width: 80%;
     max-width: 1200px;
     padding: 20px;
     overflow: hidden;
@@ -401,11 +408,11 @@ header .perfil button:hover img#perfil2 {
   .carrusel-contenedor {
     display: flex;
     width: calc(300px * 10); /* 5 tarjetas */
-    animation: carruselAnim 25s infinite linear;
+    animation: carruselAnim 35s infinite linear;
   }
   
   .producto-tarjeta {
-    width: 300px;
+    width: 500px;
     background-color: #fff;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -418,23 +425,20 @@ header .perfil button:hover img#perfil2 {
   .img-figura {
     display: flex;
     justify-content: center;
+    width: 100%;
   }
-  
-/* Estilo inicial de la imagen */
-.img-figura img {
-    border-radius: 30px; /* Mantiene bordes redondeados */
+
+.img-figura img#imagen {
+    border-radius: 30px; 
     width: 100%;
     padding: 10px;
     height: auto;
-    padding: 0; /* Elimina cualquier espacio interno */
+    padding: 0; 
     object-fit: cover;
-    transition: transform 0.3s ease-in-out;
-    cursor: pointer; /* Cambia el cursor a un puntero */
+    
+    cursor: pointer; 
   }
-  
-  .img-figura img:hover {
-    transform: scale(1.1); /* Efecto de zoom (10% más grande) */
-  }
+
   
   
   /* Estilo del modal */
