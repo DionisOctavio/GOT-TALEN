@@ -6,7 +6,7 @@
 /*======== Body estilos de todo el cuerpo ========*/
 body {
     font-family: Arial, sans-serif;
-    background-color: #f7f7f2;
+    background-color: #ffffff;
     margin: 0;
     font-family: "Roboto Mono", monospace;
 }
@@ -323,41 +323,35 @@ header .perfil button:hover img#perfil2 {
 }
 
 .navegacion {
-  margin-top: 20px; /* Añade un margen para separarla del div de productos */
-  text-align: center; /* Centra los botones */
-  display: block; /* Garantiza que ocupe toda la fila */
+  margin-top: 20px; 
+  text-align: center; 
+  display: block; 
 }
 
 .cuerpo input[type="radio"] {
-  appearance: none; /* Elimina el estilo nativo del navegador */
-    -webkit-appearance: none; /* Compatibilidad con navegadores WebKit */
-    width: 15px;
-    height: 15px;
-    background-color: #2970DB; /* Rojo uniforme */
-    border: none; /* Sin borde */
-    border-radius: 50%; /* Forma circular */
-    cursor: pointer;
-    display: inline-block;
-    margin: 0 5px;
+display: none;
 }
 
-.cuerpo input[type="radio"]:checked {
-  background-color: #cc0000; /* Verde uniforme */
-}
-
-.navegacion label {
-  display: inline-block; /* Hace que los botones se alineen horizontalmente */
-  margin: 0 10px; /* Espaciado entre los botones */
-  padding: 10px 15px;
-  background-color: #2970DB;
-  color: #fff;
-  border-radius: 5px;
+.navegacion label{
+  display: inline-block; 
+  text-align: center; 
+  line-height: 45px;
+  margin: 0 10px; 
+  border-radius: 100%; 
   cursor: pointer;
+  width: 45px; 
+  height: 45px;
+  border: #3b82f6 1px solid; 
+  background-color: #e3edff; 
+  color: #3b82f6; 
 }
 
 .navegacion label:hover {
-  background-color: #1a5ac6;
+  background-color: #3b82f6; 
+  box-shadow: 0 0 0 5px #3b83f65f; 
+  color: #fff;
 }
+
 
 .novedades-productos {
   display: flex;
@@ -368,16 +362,19 @@ header .perfil button:hover img#perfil2 {
 
 .novedades-productos .producto-tarjeta {
   width: 300px;
-  background: #fff;
+  background: #ffffff;
   text-align: center;
   padding: 10px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+  border:  white 3px solid;
   display: none;
+  transition: all 0.3s ease;
 }
 
 .novedades-productos .producto-tarjeta:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border: #000000 3px solid;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
 }
 
 .novedades-productos .producto-tarjeta img {
@@ -566,6 +563,85 @@ header .perfil button:hover img#perfil2 {
 
 
 /*======== Apartado de Aperitivos mas vendidos ========*/
+/*
+.producto-tarjeta {
+  width: 300px;
+  background: #ffffff;
+  text-align: center;
+  padding: 10px;
+  border-radius: 25px;
+  border:  white 3px solid;
+  display: none;
+  transition: all 0.3s ease;
+}
+
+.producto-tarjeta:hover {
+  border: #000000 3px solid;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+}
+
+.producto-tarjeta img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.producto-tarjeta h3 {
+  font-size: 14px;
+  color: #333;
+  margin: 10px 0;
+  font-weight: normal;
+}
+
+.precio {
+  font-size: 20px;
+  color: #2a74ff;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.contenedor-botones {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.btn-agregar {
+  background-color: #2a74ff;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  width: 90%;  
+}
+*/
+
+.btn-agregar:hover {
+  background-color: #1a5ac6;
+}
+
+.favorito {
+  background-color: #2a74ff;
+  padding: 7px;
+  border-radius: 10px;
+  font-size: 20px;
+  color: #ffffff;
+  cursor: pointer;
+  margin-left: 10px; /* ajusta el margen según sea necesario */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10%; /* ajusta el ancho según sea necesario */
+}
+
+.favorito:hover {
+  background-color: #ff4b4b;
+  color: #ffffff;
+}
 
 .aperitimos {
     display: flex;
