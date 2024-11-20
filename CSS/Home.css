@@ -56,7 +56,7 @@ header {
   
   .menu-item > a {
     text-decoration: none;
-    font-size: 16px;
+    font-size: 21px;
     color: #000;
     text-transform: uppercase;
     transition: color 0.3s;
@@ -137,7 +137,12 @@ header {
     opacity: 0; 
   }
   
-  
+/*========CUERPO========*/
+
+.cuerpo {
+  margin-left: 10%;
+  margin-right:  10%;
+}
 
 /*======== Foto HOME ========*/
 
@@ -189,7 +194,135 @@ header {
     border: none;
 }
 
+/*====BARRAS====*/
 
+hr {
+  border: none;
+  background: #2970DB;
+  background: linear-gradient(to right, #2970DB, #ff8800, #d62727);
+  height: 3px;
+}
+
+.barra {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+
+}
+
+.barra .bar-text-1 h3 {
+  font-family: japanese, sans-serif;
+  font-weight: normal;
+  margin-left: 10px;
+  font-size: 24px;
+  color: #222;
+  margin: 0;
+}
+
+.barra .bar-text-2 h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  margin-right: 10px;
+  font-size: 16px;
+  color: #585858;
+  margin: 0;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.barra .bar-text-2 a {
+  text-decoration: none;
+}
+
+.barra .bar-text-2 h3:hover {
+color: #2970DB;
+cursor: pointer;  
+font-size: 16px;
+}
+
+/*====Tarjetas Productos====*/
+
+.novedades-productos {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 20px; 
+  justify-content: center; 
+  margin: 20px auto; 
+  max-width: 1500px; 
+}
+
+/* Tarjetas de productos */
+.producto-tarjeta {
+  background-color: #fff; 
+  border: 1px solid #ddd; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  width: 220px; 
+  padding: 15px; 
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  text-align: center; 
+}
+
+/* Imagen del producto */
+.producto-tarjeta img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 4px; 
+}
+
+/* Título del producto */
+.producto-tarjeta h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Precio */
+.producto-tarjeta .precio {
+  font-size: 18px;
+  font-weight: bold;
+  color: #b71c1c; 
+  margin-bottom: 15px;
+  margin-top: auto;
+}
+
+/* Contenedor de botones */
+.contenedor-botones {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+}
+
+/* Botón agregar */
+.btn-agregar {
+  background-color: #b71c1c;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-agregar:hover {
+  background-color: #8e0000; /* Oscurece el color al pasar el ratón */
+}
+
+/*======== Ultimas Figuras =========*/
+
+.ultimas-figuras {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 20px; 
+  justify-content: center; 
+  margin: 20px auto; 
+  max-width: 1500px; 
+}
 
 
 
@@ -241,7 +374,7 @@ header {
 
 /* Footer General */
 .footer {
-    background-color: #0f0f0f; /* Fondo oscuro */
+    background-color: #232323; /* Fondo oscuro */
     color: #fff; /* Texto blanco */
     padding: 30px 20px;
     font-family: Helvetica, sans-serif;
