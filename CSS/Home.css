@@ -164,7 +164,7 @@ header {
 hr {
   border: none;
   background: #2970DB;
-  background: linear-gradient(to right, #2970DB, #ff8800, #d62727);
+  background: linear-gradient(to right, #000000, #ff8800, #d62727);
   height: 3px;
 }
 
