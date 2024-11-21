@@ -118,14 +118,14 @@ header {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      padding: 10px 20px;
       width: 100%;
       background-color: #fff;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      position: relative;
+      z-index: 1000;
   }
 
   .menu-toggle {
-      display: none; /* Oculta el checkbox */
+      display: none; /* Ocultamos el checkbox */
   }
 
   .menu-label {
@@ -134,36 +134,61 @@ header {
       color: #2970DB;
       background: none;
       border: none;
-      padding: 10px;
+      padding: 10px 20px;
   }
 
   .menu-dropdown {
-      display: none;
+      position: fixed;
+      top: 0;
+      left: -100%; /* Ocultamos el menú fuera de la pantalla */
+      width: 250px; /* Ancho del menú deslizable */
+      height: 100vh; /* Ocupa toda la altura de la pantalla */
+      background-color: #fff;
+      display: flex;
       flex-direction: column;
       gap: 10px;
-      margin-top: 10px;
-      background-color: #f9f9f9;
-      padding: 10px;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+      transition: left 0.3s ease-in-out; /* Transición suave para deslizar */
+      z-index: 1000;
   }
 
   .menu-dropdown a {
       text-decoration: none;
       color: #000;
       font-size: 16px;
-      padding: 5px 0;
+      padding: 10px 0;
+      border-bottom: 1px solid #ddd;
   }
 
   .menu-dropdown a:hover {
       color: #2970DB;
   }
 
+  /* Botón de cierre */
+  .menu-dropdown .close-menu {
+      align-self: flex-end;
+      background: none;
+      border: none;
+      font-size: 18px;
+      font-weight: bold;
+      color: #2970DB;
+      cursor: pointer;
+      margin-bottom: 20px;
+  }
+
   /* Mostrar el menú cuando el checkbox está marcado */
   .menu-toggle:checked + .menu-label + .menu-dropdown {
-      display: flex;
+      left: 0; /* Muestra el menú deslizable */
+  }
+
+  /* Ocultar menú al desmarcar el checkbox */
+  .menu-toggle:not(:checked) + .menu-label + .menu-dropdown {
+      left: -100%;
   }
 }
+
+
 
 /*========CUERPO========*/
 
