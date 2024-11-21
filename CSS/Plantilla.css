@@ -289,3 +289,28 @@ header {
     width: 100%;
   }
   
+  @media (max-width: 1000px) {
+    .footer-content {
+      display: flex; /* Asegura el uso de flexbox */
+      align-items: center;
+      flex-direction: column; /* Cambia la dirección a vertical */
+    }
+
+    .footer-left {
+      align-items: center;
+    }
+
+    .footer-logo {
+      width: 300px; /* Ajusta el tamaño del logo */
+    }
+  
+    .footer-right {
+      order: -1; /* Coloca el .footer-right antes de .footer-left */
+      margin-bottom: 20px; /* Espacio entre .footer-right y .footer-left */
+    }
+
+    .cuerpo {
+      margin-left: 10px;
+      margin-right: 10px;
+  }
+}

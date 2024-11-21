@@ -102,6 +102,69 @@ header {
     opacity: 0; 
   }
   
+  .menu-mobile {
+    display: none; /* Ocultamos el menú móvil por defecto */
+}
+
+
+/* Oculta el menú normal y botones derechos en pantallas menores a 1000px */
+@media (max-width: 1000px) {
+  .menu,
+  .right-buttons {
+      display: none;
+  }
+
+  .menu-mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px 20px;
+      width: 100%;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .menu-toggle {
+      display: none; /* Oculta el checkbox */
+  }
+
+  .menu-label {
+      font-size: 18px;
+      cursor: pointer;
+      color: #2970DB;
+      background: none;
+      border: none;
+      padding: 10px;
+  }
+
+  .menu-dropdown {
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+      background-color: #f9f9f9;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .menu-dropdown a {
+      text-decoration: none;
+      color: #000;
+      font-size: 16px;
+      padding: 5px 0;
+  }
+
+  .menu-dropdown a:hover {
+      color: #2970DB;
+  }
+
+  /* Mostrar el menú cuando el checkbox está marcado */
+  .menu-toggle:checked + .menu-label + .menu-dropdown {
+      display: flex;
+  }
+}
+
 /*========CUERPO========*/
 
 .cuerpo {
@@ -215,6 +278,7 @@ font-size: 16px;
   justify-content: center; 
   margin: 20px auto; 
   max-width: 1500px; 
+  padding-bottom: 60px;
 }
 
 /* Tarjetas de productos */
@@ -291,6 +355,7 @@ font-size: 16px;
   justify-content: center; 
   margin: 20px auto; 
   max-width: 1500px; 
+  padding-bottom: 60px;
 }
 
 /* =========== Aperitivos =========== */
@@ -302,12 +367,33 @@ font-size: 16px;
   justify-content: center; 
   margin: 20px auto; 
   max-width: 1500px; 
+  padding-bottom: 60px;
 }
 
 
+.texto {
+  text-align: center;
+  font-family: japanese, sans-serif;
+  padding-bottom: 40px;
+}
 
+.texto h3 {
+  font-size: 24px;
+  font-weight: normal;
+}
 
+.texto p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
 
+.texto p .blue {
+  color: #2970DB;
+}
+
+.texto p .red {
+  color: #8e0000;
+}
 
 
 
@@ -352,7 +438,7 @@ font-size: 16px;
 
 /* Footer General */
 .footer {
-    background-color: #232323; /* Fondo oscuro */
+    background-color: #141414; /* Fondo oscuro */
     color: #fff; /* Texto blanco */
     padding: 30px 20px;
     font-family: Helvetica, sans-serif;
@@ -392,12 +478,13 @@ font-size: 16px;
   
   .footer-icons {
     display: flex;
+    text-align: left;
     gap: 15px; /* Espaciado entre íconos */
   }
   
   .footer-icons a img {
-    width: 30px;
-    height: 30px;
+    width: 60px;
+    height: 60px;
     filter: invert(1); /* Iconos blancos sobre fondo negro */
   }
   
@@ -436,7 +523,7 @@ font-size: 16px;
   }
   
   .footer-column ul li a:hover {
-    color: #ffd700; /* Color dorado al pasar el ratón */
+    color: #2970DB; /* Color dorado al pasar el ratón */
   }
   
   /* Línea de Copyright */
@@ -448,4 +535,32 @@ font-size: 16px;
     color: #aaa;
     width: 100%;
   }
+
+
+  @media (max-width: 1000px) {
+    .footer-content {
+      display: flex; /* Asegura el uso de flexbox */
+      align-items: center;
+      flex-direction: column; /* Cambia la dirección a vertical */
+    }
+
+    .footer-left {
+      align-items: center;
+    }
+
+    .footer-logo {
+      width: 300px; /* Ajusta el tamaño del logo */
+    }
+  
+    .footer-right {
+      order: -1; /* Coloca el .footer-right antes de .footer-left */
+      margin-bottom: 20px; /* Espacio entre .footer-right y .footer-left */
+    }
+
+    .cuerpo {
+      margin-left: 10px;
+      margin-right: 10px;
+  }
+}
+  
   
