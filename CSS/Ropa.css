@@ -1,0 +1,507 @@
+@font-face {
+  font-family: "japanese";
+  src: url("/letras/Japanese 3017.ttf");
+}
+
+@font-face {
+  font-family: "Helvetica";
+  src: url("/letras/Helvetica.ttf");
+}
+
+/*======== Body estilos de todo el cuerpo ========*/
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  margin: 0;
+  font-family: "Helvetica", sans-serif;
+}
+
+/*======== Estilos del encaezado ========*/
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/*======== Logo ========*/
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo a img {
+  margin-left: 20px;
+  width: auto;
+  height: 50px;
+}
+
+/*======== Menu ========*/
+
+.menu {
+  display: flex;
+  gap: 40px; 
+  font-family: japanese, sans-serif;
+}
+
+.menu-item {
+  position: relative; 
+}
+
+.menu-item > a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #000;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+
+.menu-item > a:hover {
+  color: #2970DB; 
+}
+
+/*======== Botones Derecha ========*/
+
+.right-buttons {
+  display: flex;
+  gap: 15px; 
+}
+
+.right-buttons a {
+  display: inline-block;
+  width: 110px; 
+  height: 40px;
+  position: relative; 
+}
+
+.right-buttons a img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; 
+  height: 100%; 
+  transition: opacity 0.3s ease; 
+}
+
+.right-buttons a img#carrito2,
+.right-buttons a img#acceder2 {
+  opacity: 0; 
+}
+
+.right-buttons a:hover img#carrito2,
+.right-buttons a:hover img#acceder2 {
+  opacity: 1; 
+}
+
+.right-buttons a:hover img#carrito1,
+.right-buttons a:hover img#acceder1 {
+  opacity: 0; 
+}
+
+.menu-mobile {
+  display: none;
+}
+
+
+
+@media (max-width: 1000px) {
+  .menu,
+  .right-buttons {
+      display: none; /* Oculta el menú tradicional y botones derechos */
+  }
+
+  .menu-mobile {
+      display: flex;
+      justify-content: space-between; /* Coloca el logo a la izquierda y el botón de menú a la derecha */
+      align-items: center;
+      width: 100%;
+      padding: 10px 20px;
+      background-color: #fff;
+      position: relative;
+      z-index: 1000;
+  }
+
+  .menu-label {
+      font-size: 24px;
+      cursor: pointer;
+      color: #000000;
+      background: none;
+      border: none;
+      padding: 0px;
+      text-align: right; /* Esto asegura que el texto esté alineado a la derecha */
+      margin-left: auto; /* Empuja el botón hacia el lado derecho */
+      transition: background-color 0.3s;
+  }
+
+  .menu-label:hover {
+      color: #2970DB;
+  }
+
+  .menu-toggle {
+      display: none; /* Ocultamos el checkbox */
+  }
+
+  .menu-dropdown {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Ocultamos el menú fuera de la pantalla hacia la derecha */
+    width: 29vw; /* Ancho del menú deslizable */
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.314); /* Sombra hacia la izquierda */
+    transition: right 0.3s ease-in-out; /* Transición suave para deslizar */
+    z-index: 1000;
+}
+
+  .menu-dropdown a {
+      text-decoration: none;
+      color: #000;
+      font-size: 16px;
+      padding: 10px 0;
+      border-bottom: 1px solid #ddd;
+      font-family: japanese, sans-serif;
+      text-align: left;
+  }
+
+  .menu-dropdown a:hover {
+      color: #2970DB;
+  }
+
+  .menu-mobile-button {
+      margin-top: 70vw; /* Empuja este bloque hacia la parte inferior */
+      display: flex;
+      flex-direction: column; /* Alinea los enlaces verticalmente */
+  }
+
+  .menu-mobile-button a {
+      text-decoration: none;
+      font-size: 16px;
+      color: #000;
+      border-bottom: none;
+      font-family: japanese, sans-serif;
+      text-align: center;
+  }
+
+  .menu-mobile-button a:hover {
+      color: #2970DB;
+  }
+
+  .menu-mobile-button .redes {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+  }
+
+  /* Botón de cierre */
+  .menu-dropdown .close-menu {
+      align-self: flex-end;
+      background: none;
+      border: none;
+      font-size: 22px;
+      font-weight: bold;
+      color: #db2929;
+      cursor: pointer;
+  }
+
+  .menu-dropdown .close-menu:hover {
+      color: #000000;
+  } 
+
+  /* Mostrar el menú cuando el checkbox está marcado */
+  .menu-toggle:checked + .menu-label + .menu-dropdown {
+      right: 0; /* Muestra el menú deslizable */
+  }
+
+  /* Ocultar menú al desmarcar el checkbox */
+  .menu-toggle:not(:checked) + .menu-label + .menu-dropdown {
+      right: -100%;
+  }
+}
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Contenedor general */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Espaciado entre las secciones */
+  padding: 20px; /* Espaciado interior */
+}
+
+/* Parte superior */
+.top-section {
+  display: flex;
+  gap: 20px; /* Espaciado entre los divs */
+  width: 100%;
+}
+
+/* Div grande a la izquierda */
+.left-div {
+  flex: 2; /* Ocupa el doble del espacio comparado con la derecha */
+  background-color: #f0f0f0; /* Fondo de ejemplo */
+  height: 300px; /* Altura fija */
+  border: 1px solid #000; /* Bordes para visualizar mejor */
+}
+
+/* Contenedor de los divs pequeños a la derecha */
+.right-divs {
+  flex: 3; /* Espacio compartido con el div izquierdo */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Dos columnas iguales */
+  grid-template-rows: repeat(2, 1fr); /* Dos filas iguales */
+  gap: 10px; /* Espaciado entre los divs pequeños */
+  height: 300px; /* Altura fija igual al div izquierdo */
+}
+
+/* Divs pequeños */
+.small-div {
+  background-color: #e0e0e0; /* Fondo de ejemplo */
+  border: 1px solid #000; /* Bordes para visualizar mejor */
+}
+
+/* Div grande debajo */
+.bottom-div {
+  background-color: #d0d0d0; /* Fondo de ejemplo */
+  height: 150px; /* Altura fija */
+  width: 100%; /* Ancho completo */
+  border: 1px solid #000; /* Bordes para visualizar mejor */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  /* Cambiar el diseño a columnas */
+  .top-section {
+      flex-direction: column; /* Los divs se apilan verticalmente */
+  }
+
+  .left-div {
+      height: 200px; /* Reducimos la altura para pantallas más pequeñas */
+  }
+
+  .right-divs {
+      grid-template-columns: 1fr; /* Cambiamos a una columna */
+      grid-template-rows: repeat(4, 1fr); /* Cuatro filas */
+      height: auto; /* Ajustamos automáticamente la altura */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Ajustes adicionales para pantallas más pequeñas */
+  .left-div {
+      height: 150px; /* Reducimos aún más la altura */
+  }
+
+  .small-div {
+      height: 100px; /* Altura fija para mantener consistencia */
+  }
+
+  .bottom-div {
+      height: 120px; /* Reducimos la altura del div inferior */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer General */
+.footer {
+  background-color: #141414; 
+  color: #fff; 
+  padding: 30px 20px;
+  font-family: Helvetica, sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between; 
+  align-items: flex-start; 
+  gap: 40px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* Sección Izquierda */
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  text-align: left; 
+}
+
+.footer-logo {
+  width: 450px; 
+  margin-bottom: 10px;
+}
+
+.footer-left p {
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.footer-icons {
+  display: flex;
+  text-align: left;
+  gap: 15px; 
+}
+
+.footer-icons a img {
+  width: 60px;
+  height: 60px;
+  filter: invert(1); 
+}
+
+/* Sección Derecha */
+.footer-right {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-column {
+  text-align: left; 
+}
+
+.footer-column h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 5px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #2970DB; 
+}
+
+/* Línea de Copyright */
+.footer-bottom {
+  margin-top: 20px;
+  border-top: 1px solid #333; 
+  text-align: center;
+  font-size: 14px;
+  color: #aaa;
+  width: 100%;
+}
+
+
+@media (max-width: 1000px) {
+  .footer-content {
+    display: flex; 
+    align-items: center;
+    flex-direction: column; 
+  }
+
+  .footer-left {
+    align-items: center;
+  }
+
+  .footer-logo {
+    width: 300px; 
+  }
+
+  .footer-right {
+    order: -1; 
+    margin-bottom: 20px; 
+  }
+
+  .cuerpo {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+}
+
+@media (max-width: 550px) {
+.footer-right {
+  flex-direction: column; 
+  align-items: center; 
+  width: 100%;
+}
+
+.footer-column {
+  text-align: center;
+}
+
+.footer-column h3 {
+  text-align: center;
+}
+
+}
