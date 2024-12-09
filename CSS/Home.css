@@ -166,9 +166,8 @@ header {
       color: #000;
       font-size: 16px;
       padding: 10px 0;
-      border-bottom: 1px solid #ddd;
       font-family: japanese, sans-serif;
-      text-align: left;
+      text-align: center;
   }
 
   .menu-dropdown a:hover {
@@ -176,7 +175,6 @@ header {
   }
 
   .menu-mobile-button {
-      margin-top: 70vw; /* Empuja este bloque hacia la parte inferior */
       display: flex;
       flex-direction: column; /* Alinea los enlaces verticalmente */
   }
@@ -187,11 +185,12 @@ header {
       color: #000;
       border-bottom: none;
       font-family: japanese, sans-serif;
+      justify-content: center;
       text-align: center;
   }
 
   .menu-mobile-button a:hover {
-      color: #2970DB;
+      color: #920f0f;
   }
 
   .menu-mobile-button .redes {
