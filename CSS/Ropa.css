@@ -15,6 +15,7 @@ body {
   background-color: #ffffff;
   margin: 0;
   font-family: "Helvetica", sans-serif;
+
 }
 
 /*======== Estilos del encaezado ========*/
@@ -103,132 +104,130 @@ header {
 }
 
 .menu-mobile {
-  display: none;
+  display: none; /* Ocultamos el menú móvil por defecto */
 }
 
 
-
+/* Oculta el menú normal y botones derechos en pantallas menores a 1000px */
 @media (max-width: 1000px) {
-  .menu,
-  .right-buttons {
-      display: none; /* Oculta el menú tradicional y botones derechos */
-  }
+.menu,
+.right-buttons {
+    display: none; /* Oculta el menú tradicional y botones derechos */
+}
 
-  .menu-mobile {
-      display: flex;
-      justify-content: space-between; /* Coloca el logo a la izquierda y el botón de menú a la derecha */
-      align-items: center;
-      width: 100%;
-      padding: 10px 20px;
-      background-color: #fff;
-      position: relative;
-      z-index: 1000;
-  }
-
-  .menu-label {
-      font-size: 24px;
-      cursor: pointer;
-      color: #000000;
-      background: none;
-      border: none;
-      padding: 0px;
-      text-align: right; /* Esto asegura que el texto esté alineado a la derecha */
-      margin-left: auto; /* Empuja el botón hacia el lado derecho */
-      transition: background-color 0.3s;
-  }
-
-  .menu-label:hover {
-      color: #2970DB;
-  }
-
-  .menu-toggle {
-      display: none; /* Ocultamos el checkbox */
-  }
-
-  .menu-dropdown {
-    position: fixed;
-    top: 0;
-    right: -100%; /* Ocultamos el menú fuera de la pantalla hacia la derecha */
-    width: 29vw; /* Ancho del menú deslizable */
-    height: 100vh; /* Ocupa toda la altura de la pantalla */
-    background-color: #fff;
+.menu-mobile {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 20px;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.314); /* Sombra hacia la izquierda */
-    transition: right 0.3s ease-in-out; /* Transición suave para deslizar */
+    justify-content: space-between; /* Coloca el logo a la izquierda y el botón de menú a la derecha */
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #fff;
+    position: relative;
     z-index: 1000;
 }
 
-  .menu-dropdown a {
-      text-decoration: none;
-      color: #000;
-      font-size: 16px;
-      padding: 10px 0;
-      border-bottom: 1px solid #ddd;
-      font-family: japanese, sans-serif;
-      text-align: left;
-  }
+.menu-label {
+    font-size: 24px;
+    cursor: pointer;
+    color: #000000;
+    background: none;
+    border: none;
+    padding: 0px;
+    text-align: right; /* Esto asegura que el texto esté alineado a la derecha */
+    margin-left: auto; /* Empuja el botón hacia el lado derecho */
+    transition: background-color 0.3s;
+}
 
-  .menu-dropdown a:hover {
-      color: #2970DB;
-  }
+.menu-label:hover {
+    color: #2970DB;
+}
 
-  .menu-mobile-button {
-      margin-top: 70vw; /* Empuja este bloque hacia la parte inferior */
-      display: flex;
-      flex-direction: column; /* Alinea los enlaces verticalmente */
-  }
+.menu-toggle {
+    display: none; /* Ocultamos el checkbox */
+}
 
-  .menu-mobile-button a {
-      text-decoration: none;
-      font-size: 16px;
-      color: #000;
-      border-bottom: none;
-      font-family: japanese, sans-serif;
-      text-align: center;
-  }
+.menu-dropdown {
+  position: fixed;
+  top: 0;
+  right: -100%; /* Ocultamos el menú fuera de la pantalla hacia la derecha */
+  width: 29vw; /* Ancho del menú deslizable */
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.314); /* Sombra hacia la izquierda */
+  transition: right 0.3s ease-in-out; /* Transición suave para deslizar */
+  z-index: 1000;
+}
 
-  .menu-mobile-button a:hover {
-      color: #2970DB;
-  }
+.menu-dropdown a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    padding: 10px 0;
+    font-family: japanese, sans-serif;
+    text-align: center;
+}
 
-  .menu-mobile-button .redes {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      justify-content: center;
-  }
+.menu-dropdown a:hover {
+    color: #2970DB;
+}
 
-  /* Botón de cierre */
-  .menu-dropdown .close-menu {
-      align-self: flex-end;
-      background: none;
-      border: none;
-      font-size: 22px;
-      font-weight: bold;
-      color: #db2929;
-      cursor: pointer;
-  }
+.menu-mobile-button {
+    display: flex;
+    flex-direction: column; /* Alinea los enlaces verticalmente */
+}
 
-  .menu-dropdown .close-menu:hover {
-      color: #000000;
-  } 
+.menu-mobile-button a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #000;
+    border-bottom: none;
+    font-family: japanese, sans-serif;
+    justify-content: center;
+    text-align: center;
+}
 
-  /* Mostrar el menú cuando el checkbox está marcado */
-  .menu-toggle:checked + .menu-label + .menu-dropdown {
-      right: 0; /* Muestra el menú deslizable */
-  }
+.menu-mobile-button a:hover {
+    color: #920f0f;
+}
 
-  /* Ocultar menú al desmarcar el checkbox */
-  .menu-toggle:not(:checked) + .menu-label + .menu-dropdown {
-      right: -100%;
-  }
+.menu-mobile-button .redes {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Botón de cierre */
+.menu-dropdown .close-menu {
+    align-self: flex-end;
+    background: none;
+    border: none;
+    font-size: 22px;
+    font-weight: bold;
+    color: #db2929;
+    cursor: pointer;
+}
+
+.menu-dropdown .close-menu:hover {
+    color: #000000;
+} 
+
+/* Mostrar el menú cuando el checkbox está marcado */
+.menu-toggle:checked + .menu-label + .menu-dropdown {
+    right: 0; /* Muestra el menú deslizable */
+}
+
+/* Ocultar menú al desmarcar el checkbox */
+.menu-toggle:not(:checked) + .menu-label + .menu-dropdown {
+    right: -100%;
+}
 }
   
   
-
 
 
 
@@ -256,81 +255,143 @@ header {
 .container {
   display: flex;
   flex-direction: column;
-  gap: 20px; /* Espaciado entre las secciones */
-  padding: 20px; /* Espaciado interior */
+  gap: 20px;
+  padding: 20px;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 /* Parte superior */
 .top-section {
   display: flex;
-  gap: 20px; /* Espaciado entre los divs */
+  gap: 20px;
   width: 100%;
 }
 
 /* Div grande a la izquierda */
 .left-div {
-  flex: 2; /* Ocupa el doble del espacio comparado con la derecha */
-  background-color: #f0f0f0; /* Fondo de ejemplo */
-  height: 300px; /* Altura fija */
-  border: 1px solid #000; /* Bordes para visualizar mejor */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;       
+  position: relative;
+}
+
+.left-div h3 {
+  font-family: japanese, sans-serif;
+  font-size: 1.8vw;
+  color: #000000;
+  font-weight: normal;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.left-div video {
+  width: 101%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* Contenedor de los divs pequeños a la derecha */
 .right-divs {
-  flex: 3; /* Espacio compartido con el div izquierdo */
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Dos columnas iguales */
-  grid-template-rows: repeat(2, 1fr); /* Dos filas iguales */
-  gap: 10px; /* Espaciado entre los divs pequeños */
-  height: 300px; /* Altura fija igual al div izquierdo */
+  flex: 1;                       
+  display: flex;
+  flex-direction: column;
+  gap: 10px;                    
+  height: 100%;                  
 }
 
 /* Divs pequeños */
 .small-div {
-  background-color: #e0e0e0; /* Fondo de ejemplo */
-  border: 1px solid #000; /* Bordes para visualizar mejor */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: end;
+  flex: 1;                       
+  position: relative;
 }
 
-/* Div grande debajo */
+.small-div h3 {
+  display: flex;
+  align-items: center;
+  font-family: japanese, sans-serif;
+  font-size: 1.8vw;
+  padding-right: 3.9vw;
+  color: #000000;
+  font-weight: normal;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.small-div img {
+  width: 69%;
+  height: 68%;
+  object-fit: cover;
+}
+
 .bottom-div {
-  background-color: #d0d0d0; /* Fondo de ejemplo */
-  height: 150px; /* Altura fija */
-  width: 100%; /* Ancho completo */
-  border: 1px solid #000; /* Bordes para visualizar mejor */
+  background-color: #d0d0d0;
+  height: 150px;
+  width: 100%;
 }
 
-/* Responsividad */
+.bottom-div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 @media (max-width: 768px) {
-  /* Cambiar el diseño a columnas */
   .top-section {
-      flex-direction: column; /* Los divs se apilan verticalmente */
+    flex-direction: column;
   }
 
-  .left-div {
-      height: 200px; /* Reducimos la altura para pantallas más pequeñas */
+  .left-div,
+  .right-divs {
+    width: 100%;     
+    height: auto;      
+  }
+
+  .left-div h3 {
+    font-size: 24px;
   }
 
   .right-divs {
-      grid-template-columns: 1fr; /* Cambiamos a una columna */
-      grid-template-rows: repeat(4, 1fr); /* Cuatro filas */
-      height: auto; /* Ajustamos automáticamente la altura */
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .small-div {
+    width: 100%;        
+    height: auto;
+    align-items: center;
+  }
+
+  .small-div h3 {
+    font-size: 24px;
+    padding-right: 0;
+  }
+
+  .bottom-div {
+    display: none;
   }
 }
 
 @media (max-width: 480px) {
-  /* Ajustes adicionales para pantallas más pequeñas */
-  .left-div {
-      height: 150px; /* Reducimos aún más la altura */
-  }
-
   .small-div {
-      height: 100px; /* Altura fija para mantener consistencia */
+    width: 100%;       
+    height: auto;
   }
 
   .bottom-div {
-      height: 120px; /* Reducimos la altura del div inferior */
+    display: none;
   }
 }
+
 
 
 
