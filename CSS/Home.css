@@ -638,6 +638,8 @@ font-size: 16px;
   text-align: center;
   font-family: japanese, sans-serif;
   padding-bottom: 40px;
+  margin-left: 5vw;
+  margin-right: 5vw;
 }
 
 .texto h3 {
@@ -648,6 +650,7 @@ font-size: 16px;
 .texto p{
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
+  text-align: justify;
 }
 
 .texto p .blue {
